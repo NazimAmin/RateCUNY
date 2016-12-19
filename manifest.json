@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "RateCUNY",
+  "version": "2.101",
+  "description": "This extension pulls rating inside CUNY First.",
+  "content_scripts": [{
+    "matches": ["https://home.cunyfirst.cuny.edu/*"],
+    "js": ["jquery.js", "scripts.js"]
+  }],
+
+  "permissions": [
+    "https://home.cunyfirst.cuny.edu/*",
+    "https://ratesbu.firebaseio.com/*",
+    "https://ratesbu-wrapper-api.appspot.com/*"
+  ],
+  "background": {
+
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "quality.css"
+  ]
+}
